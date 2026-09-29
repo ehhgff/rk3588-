@@ -1,0 +1,92 @@
+{
+  "test_info": {
+    "date": "1970-01-01 09:42:26",
+    "hostname": "quarkpi-ca2",
+    "npu_driver_version": "0.9.8",
+    "rknntoolkit_version": "2.3.2"
+  },
+  "environment": {
+    "cpu_freqs_mhz": {
+      "cpu0": 1608,
+      "cpu1": 1608,
+      "cpu2": 1608,
+      "cpu3": 1608,
+      "cpu4": 2016,
+      "cpu5": 2016,
+      "cpu6": 1800,
+      "cpu7": 1800
+    },
+    "npu_load_idle": "NPU load:  Core0: 28%, Core1: 12%, Core2: 13%,"
+  },
+  "benchmarks": [
+    {
+      "label": "NPU Core0 专用",
+      "inf_avg_ms": 2773.0,
+      "inf_min_ms": 2752.0,
+      "inf_max_ms": 2801.1,
+      "inf_std_ms": 16.9,
+      "total_avg_ms": 2773.1,
+      "rtf": 0.5416,
+      "core_mask": 1,
+      "npu_load_after": "NPU load:  Core0: 30%, Core1:  3%, Core2:  8%,"
+    },
+    {
+      "label": "NPU Core0+Core1",
+      "inf_avg_ms": 2717.3,
+      "inf_min_ms": 2699.1,
+      "inf_max_ms": 2754.3,
+      "inf_std_ms": 20.6,
+      "total_avg_ms": 2717.3,
+      "rtf": 0.5307,
+      "core_mask": 3,
+      "npu_load_after": "NPU load:  Core0: 28%, Core1:  7%, Core2:  9%,"
+    },
+    {
+      "label": "NPU Auto (全部核心)",
+      "inf_avg_ms": 2763.5,
+      "inf_min_ms": 2750.5,
+      "inf_max_ms": 2776.8,
+      "inf_std_ms": 10.1,
+      "total_avg_ms": 2763.6,
+      "rtf": 0.5398,
+      "core_mask": 0,
+      "npu_load_after": "NPU load:  Core0: 29%, Core1:  2%, Core2:  6%,"
+    },
+    {
+      "label": "dtype=int64 (原始)",
+      "inf_avg_ms": 2773.9,
+      "inf_min_ms": 2765.8,
+      "inf_max_ms": 2779.7,
+      "inf_std_ms": 5.2,
+      "total_avg_ms": 2774.0,
+      "rtf": 0.5418,
+      "dtype": "<class 'numpy.int64'>"
+    },
+    {
+      "label": "dtype=int32",
+      "inf_avg_ms": 2767.7,
+      "inf_min_ms": 2756.9,
+      "inf_max_ms": 2778.4,
+      "inf_std_ms": 6.9,
+      "total_avg_ms": 2767.8,
+      "rtf": 0.5406,
+      "dtype": "<class 'numpy.int32'>"
+    },
+    {
+      "label": "dtype=int16",
+      "inf_avg_ms": 2780.9,
+      "inf_min_ms": 2772.9,
+      "inf_max_ms": 2786.8,
+      "inf_std_ms": 4.8,
+      "total_avg_ms": 2780.9,
+      "rtf": 0.5432,
+      "dtype": "<class 'numpy.int16'>"
+    }
+  ],
+  "audio": {
+    "file": "/data/vocoder_rknn_diag_10s.wav",
+    "duration_s": 10.24
+  },
+  "npu_driver_version": "0.9.8",
+  "rknntoolkit_version": "2.3.2"
+}

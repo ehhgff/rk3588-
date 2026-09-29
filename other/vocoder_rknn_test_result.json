@@ -1,0 +1,49 @@
+{
+  "test_info": {
+    "date": "1970-01-01 09:34:42",
+    "hostname": "quarkpi-ca2",
+    "model": "/userdata/qwen3-tts/vocoder/vocoder.rknn"
+  },
+  "model_loading": {
+    "load_time_s": 0.063,
+    "init_time_s": 0.265,
+    "memory_mb": {
+      "before": 20.7,
+      "after": 341.9,
+      "model_only": 321.2
+    }
+  },
+  "model_info": {
+    "input_shape": [
+      1,
+      64,
+      16
+    ],
+    "output_shape": [
+      1,
+      122880
+    ],
+    "audio_duration_s": 5.12
+  },
+  "benchmark": {
+    "avg_ms": 2816.6,
+    "min_ms": 2792.3,
+    "max_ms": 2834.5,
+    "std_ms": 15.2,
+    "audio_duration_s": 5.12,
+    "rtf": 0.5501,
+    "speedup_vs_onnx_cpu": 1.6,
+    "runs": 10,
+    "warmup": 5
+  },
+  "audio_generation": {
+    "wav_file": "/data/vocoder_rknn_test.wav",
+    "duration_s": 5.12,
+    "gen_time_ms": 2812.1
+  },
+  "residency_confirm": {
+    "status": "passed",
+    "inference_ms": 2900.5,
+    "memory_mb": 386.6
+  }
+}

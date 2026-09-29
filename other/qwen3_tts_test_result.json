@@ -1,0 +1,130 @@
+{
+  "test_info": {
+    "date": "1970-01-01 09:20:15",
+    "hostname": "quarkpi-ca2",
+    "python_version": "3.10.5 (main, Feb  6 2025, 11:02:32) [GCC 10.4.0]",
+    "model_dir": "/userdata/qwen3-tts"
+  },
+  "model_loading": {
+    "predictor": {
+      "load_time_s": 4.686
+    },
+    "vocoder": {
+      "load_time_s": 5.921,
+      "audio_samples_per_inference": 122880,
+      "audio_duration_per_inference_s": 5.12
+    },
+    "memory_mb": {
+      "before": 21.2,
+      "after": 885.0,
+      "model_only": 863.8
+    },
+    "system_memory": {
+      "MemTotal": 3997212,
+      "MemFree": 23904,
+      "MemAvailable": 45420
+    }
+  },
+  "predictor_benchmark": {
+    "seq_32": {
+      "seq_len": 32,
+      "avg_ms": 55.4,
+      "min_ms": 53.6,
+      "max_ms": 58.2,
+      "std_ms": 1.5,
+      "runs": 10
+    },
+    "seq_64": {
+      "seq_len": 64,
+      "avg_ms": 100.0,
+      "min_ms": 98.1,
+      "max_ms": 103.7,
+      "std_ms": 2.2,
+      "runs": 10
+    },
+    "seq_128": {
+      "seq_len": 128,
+      "avg_ms": 191.1,
+      "min_ms": 188.6,
+      "max_ms": 192.8,
+      "std_ms": 1.5,
+      "runs": 10
+    },
+    "seq_256": {
+      "seq_len": 256,
+      "avg_ms": 398.4,
+      "min_ms": 396.9,
+      "max_ms": 401.9,
+      "std_ms": 1.6,
+      "runs": 10
+    }
+  },
+  "vocoder_benchmark": {
+    "avg_ms": 4550.3,
+    "min_ms": 4520.0,
+    "max_ms": 4581.8,
+    "std_ms": 20.3,
+    "audio_duration_s": 5.12,
+    "rtf": 0.8887,
+    "rtf_description": "1:1.1x 实时",
+    "runs": 10
+  },
+  "residency_test": {
+    "status": "passed",
+    "runtime_s": 83.49215455500052,
+    "memory_samples": [
+      {
+        "t": 0,
+        "memory_mb": 937.4
+      },
+      {
+        "t": 5,
+        "memory_mb": 937.9
+      },
+      {
+        "t": 10,
+        "memory_mb": 937.9
+      },
+      {
+        "t": 15,
+        "memory_mb": 940.6
+      },
+      {
+        "t": 20,
+        "memory_mb": 940.6
+      },
+      {
+        "t": 25,
+        "memory_mb": 942.9
+      },
+      {
+        "t": 30,
+        "memory_mb": 942.9
+      },
+      {
+        "t": 35,
+        "memory_mb": 944.7
+      },
+      {
+        "t": 40,
+        "memory_mb": 944.7
+      },
+      {
+        "t": 45,
+        "memory_mb": 944.8
+      },
+      {
+        "t": 50,
+        "memory_mb": 944.8
+      },
+      {
+        "t": 55,
+        "memory_mb": 945.8
+      }
+    ],
+    "memory_start_mb": 937.4,
+    "memory_end_mb": 945.8,
+    "memory_peak_mb": 945.8,
+    "memory_leak_mb": 8.4
+  }
+}

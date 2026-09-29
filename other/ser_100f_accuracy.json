@@ -1,0 +1,14 @@
+{
+  "accuracy": {
+    "cosine_similarity": {
+      "mean": 0.9782,
+      "min": 0.9652,
+      "std": 0.006132
+    },
+    "max_abs_diff_mean": 44.5479,
+    "mean_abs_diff_mean": 24.6385,
+    "num_tests": 10,
+    "threshold": 0.99,
+    "passed": false
+  }
+}
