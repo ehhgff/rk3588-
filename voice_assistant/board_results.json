@@ -1,0 +1,26 @@
+{
+  "SER_INT8_3core": {
+    "avg_ms": 1130.993,
+    "med_ms": 1127.735,
+    "p90_ms": 1136.758,
+    "min_ms": 1124.662
+  },
+  "SER_FP16_3core": {
+    "avg_ms": 1368.921,
+    "med_ms": 1366.144,
+    "p90_ms": 1382.252,
+    "min_ms": 1358.362
+  },
+  "quant_error": {
+    "cos_similarity": 0.983288,
+    "max_diff": 11.865568
+  },
+  "ASR_Decoder": {
+    "avg_ms": 0.573,
+    "p90_ms": 0.603
+  },
+  "ASR_Joiner": {
+    "avg_ms": 1.287,
+    "p90_ms": 0.857
+  }
+}

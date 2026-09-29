@@ -1,0 +1,25 @@
+{
+  "matcha_acoustic": {
+    "avg_ms": 44.999,
+    "med_ms": 44.995,
+    "p90_ms": 45.096,
+    "p99_ms": 45.287,
+    "min_ms": 44.839
+  },
+  "matcha_vocoder": {
+    "avg_ms": 16.026,
+    "med_ms": 16.034,
+    "p90_ms": 16.213,
+    "p99_ms": 16.267,
+    "min_ms": 15.736
+  },
+  "matcha_vocoder_seq8": {
+    "avg_ms": 16.008
+  },
+  "matcha_vocoder_seq16": {
+    "avg_ms": 16.051
+  },
+  "matcha_vocoder_seq32": {
+    "avg_ms": 16.081
+  }
+}
