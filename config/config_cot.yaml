@@ -1,0 +1,48 @@
+# 流式语音助手配置文件 - CoT医疗专用版
+
+# 音频设备配置
+audio:
+  record_device: "plughw:3,0"      # USB麦克风
+  playback_device: "plughw:4,0"    # USB音响
+  sample_rate: 16000
+  channels: 1
+  format: "S16_LE"
+
+# VAD参数
+vad:
+  silence_duration: 1.0            # 静音检测时长（秒）
+  padding_duration_ms: 300         # 前置缓冲时长（毫秒）
+  vad_batch_size: 5                # 批量处理帧数
+
+# TTS参数
+tts:
+  min_sentence_len: 10             # 最小句长
+  max_buffer_len: 50               # 最大缓冲区长度
+  max_workers: 2                   # TTS线程池大小
+
+# AGC参数
+agc:
+  enabled: true                    # 启用自动增益控制
+  target_db: -20                   # 目标音量(dB)
+  max_gain: 10.0                   # 最大增益
+
+# CoT医疗参数
+cot:
+  enabled: true                    # 启用CoT思维链
+  department: "general"            # 默认科室
+  max_contexts: 2                  # RAG检索结果数量
+
+# 服务地址
+services:
+  asr_url: "http://localhost:8080/asr"
+  llm_socket: "/tmp/qwen3_llm.sock"
+  tts_url: "http://localhost:8081/tts"
+  rag_socket: "/tmp/rag_optimized.sock"
+
+# 性能参数
+performance:
+  max_mem_size: 2097152            # 内存池大小(2MB)
+  asr_queue_size: 2
+  llm_queue_size: 5
+  tts_queue_size: 100
+  audio_queue_size: 3

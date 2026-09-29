@@ -1,0 +1,57 @@
+# 流式语音助手 - 生产级优化版配置
+
+# 音频配置
+audio:
+  record_device: "plughw:3,0"
+  playback_device: "plughw:4,0"
+  sample_rate: 16000
+  channels: 1
+  format: "S16_LE"
+
+# VAD配置
+vad:
+  frame_duration_ms: 30
+  silence_duration: 1.0
+  padding_duration_ms: 300
+  batch_size: 5
+
+# AGC配置
+agc:
+  enabled: true
+  target_db: -20
+  max_gain: 10.0
+
+# 服务配置
+services:
+  asr_url: "http://localhost:8080/asr"
+  llm_socket: "/tmp/qwen3_llm.sock"
+  tts_url: "http://localhost:8081/tts"
+  rag_socket: "/tmp/rag_optimized.sock"
+
+# TTS配置
+tts:
+  max_workers: 2
+
+# 极速诊断配置
+fast:
+  max_first_sentence_chars: 35
+  enable_local_match: true
+
+# 匹配配置
+matching:
+  enable_fuzzy: true
+  fuzzy_threshold: 0.8
+  enable_combination: true
+
+# 缓存配置
+cache:
+  size: 1000
+
+# 优化配置
+optimization:
+  lazy_load: true
+  max_mem_size: 2097152  # 2MB
+  asr_queue_size: 2
+  llm_queue_size: 5
+  tts_queue_size: 100
+  audio_queue_size: 3
